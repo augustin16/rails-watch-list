@@ -1,0 +1,16 @@
+<h1>
+hello</h1>
+<%= image_tag "1.jpg", style: 'height:25vw;width:50vw;margin-bottom:20px;' %>
+
+<div class="container"> 
+<%= link_to "Add list", new_list_path %>
+
+<div class="wraper">
+  <% @lists.each do |list| %>
+    <div class="list-card mb-4">
+    <%= list.name%>
+    <%= link_to "Show more", list_path(list) %>
+    </div>
+  <% end %>
+  </div>
+</div>

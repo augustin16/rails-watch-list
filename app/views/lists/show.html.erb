@@ -1,0 +1,9 @@
+<div class="container"> 
+    <h1><%= @list.name %></h1>
+<%= link_to "Add movie", new_list_bookmark_path(@list.id) %>
+<% @list.movies.each do |movie| %>
+    <div class="list-card mb-4">
+        <%= movie.title %>
+    </div>
+<% end %>
+</div>
